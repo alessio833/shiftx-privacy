@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informativa sulla Privacy — ShiftX</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+    line-height: 1.6;
+    color: #222;
+  }
+  h1 { font-size: 1.6em; margin-bottom: 4px; }
+  h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  .updated { color: #666; font-size: 0.9em; margin-bottom: 2em; }
+  ul { padding-left: 1.3em; }
+</style>
+</head>
+<body>
+
+<h1>Informativa sulla Privacy — ShiftX</h1>
+<p class="updated">Ultimo aggiornamento: 30 luglio 2026</p>
+
+<p>ShiftX ("l'app", "noi") rispetta la privacy degli utenti. Questa informativa spiega quali dati raccogliamo, come li usiamo e quali diritti hai.</p>
+
+<h2>Titolare del trattamento</h2>
+<p>Alessio Madeddu<br>
+Email di contatto: shiftx.app@gmail.com</p>
+
+<h2>Dati che raccogliamo</h2>
+<p><strong>Dati account</strong>: indirizzo email, utilizzato per l'autenticazione tramite Firebase Authentication (email e password, oppure accesso con account Google se attivi la sincronizzazione con Google Calendar).</p>
+<p><strong>Dati sui turni</strong>: le informazioni che inserisci nell'app (nome del calendario, sequenza dei turni, orari, stato dei giorni — ferie, malattia, permesso, straordinari — e note personali). Questi dati sono necessari al funzionamento stesso dell'app e sono salvati su Firebase Firestore (Google Cloud), in un progetto separato per l'ambiente di produzione.</p>
+<p><strong>Dati Google Calendar (opzionale, solo se attivi la sincronizzazione Premium)</strong>: se scegli di collegare il tuo account Google, l'app richiede l'autorizzazione a creare e gestire un calendario secondario dedicato ("ShiftX") sul tuo Google Calendar. Il token di accesso viene cifrato (Fernet) prima di essere salvato e viene utilizzato esclusivamente per sincronizzare i tuoi turni futuri in quel calendario. Non accediamo ad altri calendari o eventi che non abbiamo creato noi.</p>
+<p><strong>Dati tecnici minimi</strong>: log applicativi standard lato server (Render) necessari al funzionamento e alla sicurezza del servizio, non usati per profilazione.</p>
+
+<h2>Come usiamo i dati</h2>
+<ul>
+  <li>Per fornire le funzionalità dell'app (calendario turni, statistiche, esportazione PDF, sincronizzazione Google Calendar opzionale).</li>
+  <li>Per generare backup di sicurezza automatici (copia dei tuoi turni in formato JSON su uno storage privato) prima di modifiche critiche, a scopo di ripristino in caso di errore.</li>
+  <li>Non vendiamo, affittiamo né condividiamo i tuoi dati con terze parti per finalità pubblicitarie.</li>
+  <li>Non mostriamo pubblicità di terzi all'interno dell'app.</li>
+</ul>
+
+<h2>Con chi condividiamo i dati</h2>
+<p>I dati sono trattati dai seguenti fornitori di infrastruttura, in qualità di responsabili del trattamento:</p>
+<ul>
+  <li><strong>Google Firebase / Google Cloud Platform</strong>: autenticazione, database (Firestore), storage dei backup.</li>
+  <li><strong>Render</strong>: hosting del backend applicativo.</li>
+  <li><strong>Google Calendar API</strong>: solo se attivi la sincronizzazione opzionale, per creare/aggiornare eventi nel calendario secondario "ShiftX".</li>
+</ul>
+<p>Nessun altro soggetto terzo riceve i tuoi dati.</p>
+
+<h2>Conservazione dei dati</h2>
+<p>I tuoi dati restano associati al tuo account finché non richiedi la cancellazione. Storico e conteggi (ore lavorate, statistiche) relativi a giorni passati non vengono modificati automaticamente dalla sincronizzazione Google Calendar, per preservarne l'accuratezza.</p>
+
+<h2>I tuoi diritti</h2>
+<ul>
+  <li><strong>Esportare i tuoi dati</strong>: scaricare un file .json con tutti i tuoi turni direttamente dall'app.</li>
+  <li><strong>Eliminare il tuo account</strong>: l'app offre una funzione dedicata che elimina definitivamente il tuo calendario e tutti i dati associati, e revoca l'autorizzazione a Google Calendar se attiva (diritto all'oblio, art. 17 GDPR).</li>
+  <li><strong>Richiedere accesso, rettifica o cancellazione dei dati</strong> scrivendo a shiftx.app@gmail.com.</li>
+</ul>
+
+<h2>Sicurezza</h2>
+<p>I token di accesso a servizi terzi (Google Calendar) sono cifrati prima del salvataggio. L'accesso ai dati richiede autenticazione tramite token JWT verificato ad ogni richiesta. Le regole di sicurezza di Firestore permettono lettura/scrittura solo agli utenti autenticati proprietari dei dati.</p>
+
+<h2>Modifiche a questa informativa</h2>
+<p>Potremo aggiornare questa informativa in futuro. La data di "ultimo aggiornamento" in cima alla pagina indica l'ultima revisione. In caso di modifiche sostanziali, ti informeremo tramite l'app.</p>
+
+<h2>Contatti</h2>
+<p>Per qualsiasi domanda su questa informativa o sui tuoi dati: shiftx.app@gmail.com</p>
+
+</body>
+</html>
